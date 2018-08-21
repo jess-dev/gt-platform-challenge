@@ -88,7 +88,13 @@ completing the challenge.
 
 ## Getting Started
 
-The database table we've provided is hosted externally. You are expected to connect to the external host. The details are:
+The database table we've provided is hosted internally, and you will be VPN to gain access. The VPN details are:
+
+* Address: `https://webvpn.alh.co.uk/`
+* Username: `candidate`
+* Password: `14542108`
+
+And database:
 
 * Host: `SALHMHR116.THG.CO.UK`
 * Username: `CandidateUser`
