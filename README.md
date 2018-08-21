@@ -1,9 +1,3 @@
-
-
-Use:
-
-https://webhook.site/
-
 # Platform Team Challenge
 
 Thank you for your interest in joining G Touring, and specifically being part
