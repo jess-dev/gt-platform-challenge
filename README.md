@@ -28,7 +28,7 @@ a single endpoint as an example receiving client, listening to changes.
 The workflow we'd like to capture is as follows:
 
 * Every _5 seconds_, your application will read a single record from the event (`Squeak`) table. This action will be synchronous.
-* For each record, you will deliver a JSON payload via `HTTP POST` to [https://webhook.site/2af5b9fd-c891-4e24-8ad0-ebb9dc3eff28](https://webhook.site/2af5b9fd-c891-4e24-8ad0-ebb9dc3eff28). The JSON payload should look as follows:
+* For each record, you will deliver a JSON payload via `HTTP POST` to [https://webhook.site](https://webhook.site/). You may need to create a `New URL` to POST the payload to, as the environment expires after 24 hours. The JSON payload should look as follows:
 
 ```
 # The value names presented here map to the field names in the table
@@ -45,7 +45,7 @@ The workflow we'd like to capture is as follows:
 * Upon successful delivery, you will update the respective record, amending the `UtcProcessedDate` field with the UTC time of when the delivery was successfully completed.
 * Then, you will continue onto the next record, and continue the same set of actions.
 * The application should cleanly stop processing when all 100 records in the table have been delivered.
-* You can visit the [webhook site](https://webhook.site/2af5b9fd-c891-4e24-8ad0-ebb9dc3eff28) to confirm and inspect deliveries.
+* You can visit the [webhook site](https://webhook.site/) to confirm and inspect deliveries.
 
 Here's a sample of how the data looks like, including the unprocessed `UtcProcessedDate`:
 
