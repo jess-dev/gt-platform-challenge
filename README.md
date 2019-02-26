@@ -21,13 +21,13 @@ want you to feel rushed, but we also prefer you keep the scope minimal.
 
 For this project, we prefer you use `.NET Stable 4.7.x`, and `C# Stable 7.x`.
 
-You will be consuming an SQL Server database table which contains a series of events, delivered from our internal
-applications. These events signify changes to data within our source systems, and for this exercise, we will use
+Your application will be reading a `csv` file, which contains a series of
+events. These events signify changes to data within our source systems, and for this exercise, we will use
 a single endpoint as an example receiving client, listening to changes.
 
 The workflow we'd like to capture is as follows:
 
-* Every _5 seconds_, your application will read a single record from the event (`Squeak`) table. This action will be synchronous.
+* Every _5 seconds_, your application will read a single row from the `squeaks.csv` file. This action will be synchronous.
 * For each record, you will deliver a JSON payload via `HTTP POST` to [https://webhook.site](https://webhook.site/). You may need to create a `New URL` to POST the payload to, as the environment expires after 24 hours. The JSON payload should look as follows:
 
 ```
@@ -42,10 +42,11 @@ The workflow we'd like to capture is as follows:
 }
 ```
 
-* Upon successful delivery, you will update the respective record, amending the `UtcProcessedDate` field with the UTC time of when the delivery was successfully completed.
-* Then, you will continue onto the next record, and continue the same set of actions.
-* The application should cleanly stop processing when all 100 records in the table have been delivered.
-* You can visit the [webhook site](https://webhook.site/) to confirm and inspect deliveries.
+* Upon successful delivery, your application should:
+
+* Continue onto the next record, and continue the same set of actions.
+* The application should cleanly stop processing when the CSV has been fully read. (100 lines)
+* You can visit the [webhook site](https://webhook.site/) to confirm and inspect deliveries. Make sure you visit your unique URL
 
 Here's a sample of how the data looks like, including the unprocessed `UtcProcessedDate`:
 
@@ -88,19 +89,9 @@ completing the challenge.
 
 ## Getting Started
 
-The database table we've provided is hosted internally, and you will be VPN to gain access. The VPN details are:
-
-* Address: `https://webvpn.alh.co.uk/`
-* Username: `candidate`
-* Password: `14542108`
-
-And database:
-
-* Host: `SALHMHR116.THG.CO.UK`
-* Username: `CandidateUser`
-* Password: `Candidate123`
-* Database Name: `Squeaking`
-* Table Name: `Squeak`
+Everything is provided in this repository, including the data you'll work with.
+If you run into any blockers, please reach out! We prefer if a candidate speaks
+to us.
 
 ## Talk To Us
 
