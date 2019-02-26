@@ -48,7 +48,7 @@ The workflow we'd like to capture is as follows:
 * The application should cleanly stop processing when the CSV has been fully read. (100 lines)
 * You can visit the [webhook site](https://webhook.site/) to confirm and inspect deliveries. Make sure you visit your unique URL
 
-Here's a sample of how the data looks like, including the unprocessed `UtcProcessedDate`:
+Here's a sample of how the data looks like, the last column is ignored in this exercise.
 
 | Id | UtcDate                 | Topic     | Kind        | UtcProcessedDate |
 |----|-------------------------|-----------|-------------|------------------|
