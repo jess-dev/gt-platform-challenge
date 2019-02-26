@@ -13,7 +13,7 @@ Id,UtcDate,Topic,Kind,UtcProcessedDate
 26,"21/08/2018 09:02","Time","Minute",NULL
 27,"21/08/2018 09:02","Hotel","Modified",NULL
 28,"21/08/2018 09:02","Hotel","Modified",NULL
-29,"21/08/2018 10:00","Time","","Minute,Hour",NULL
+29,"21/08/2018 10:00","Time","Minute,Hour",NULL
 30,"21/08/2018 10:00","Booking","Modified",NULL
 31,"21/08/2018 10:00","Passenger","Modified",NULL
 32,"21/08/2018 10:00","Invoice","Generated",NULL
@@ -27,7 +27,7 @@ Id,UtcDate,Topic,Kind,UtcProcessedDate
 40,"21/08/2018 10:02","Time","Minute",NULL
 41,"21/08/2018 10:02","Hotel","Modified",NULL
 42,"21/08/2018 10:02","Transporter","Modified",NULL
-43,"21/08/2018 11:00","Time","","Minute,Hour",NULL
+43,"21/08/2018 11:00","Time","Minute,Hour",NULL
 44,"21/08/2018 11:00","Booking","Modified",NULL
 45,"21/08/2018 11:00","Passenger","Modified",NULL
 46,"21/08/2018 11:00","Invoice","Generated",NULL
@@ -41,7 +41,7 @@ Id,UtcDate,Topic,Kind,UtcProcessedDate
 54,"21/08/2018 11:02","Time","Minute",NULL
 55,"21/08/2018 11:02","Hotel","Modified",NULL
 56,"21/08/2018 11:02","Transporter","Modified",NULL
-57,"21/08/2018 12:00","Time","","Minute,Hour",NULL
+57,"21/08/2018 12:00","Time","Minute,Hour",NULL
 58,"21/08/2018 12:00","Booking","Modified",NULL
 59,"21/08/2018 12:00","Booking","Modified",NULL
 60,"21/08/2018 12:00","Invoice","Generated",NULL
@@ -55,7 +55,7 @@ Id,UtcDate,Topic,Kind,UtcProcessedDate
 68,"21/08/2018 12:02","Time","Minute",NULL
 69,"21/08/2018 12:02","Hotel","Modified",NULL
 70,"21/08/2018 12:02","Transporter","Modified",NULL
-71,"21/08/2018 13:00","Time","","Minute,Hour",NULL
+71,"21/08/2018 13:00","Time","Minute,Hour",NULL
 72,"21/08/2018 13:00","Booking","Modified",NULL
 73,"21/08/2018 13:00","Exception","Raised",NULL
 74,"21/08/2018 13:00","Invoice","Generated",NULL
@@ -69,7 +69,7 @@ Id,UtcDate,Topic,Kind,UtcProcessedDate
 82,"21/08/2018 13:02","Time","Minute",NULL
 83,"21/08/2018 13:02","Hotel","Modified",NULL
 84,"21/08/2018 13:02","Transporter","Modified",NULL
-85,"21/08/2018 14:00","Time","","Minute,Hour",NULL
+85,"21/08/2018 14:00","Time","Minute,Hour",NULL
 86,"21/08/2018 14:00","Booking","Modified",NULL
 87,"21/08/2018 14:00","Exception","Raised",NULL
 88,"21/08/2018 14:00","Invoice","Generated",NULL
@@ -83,7 +83,7 @@ Id,UtcDate,Topic,Kind,UtcProcessedDate
 96,"21/08/2018 14:02","Time","Minute",NULL
 97,"21/08/2018 14:02","Hotel","Modified",NULL
 98,"21/08/2018 14:02","Transporter","Modified",NULL
-99,"21/08/2018 15:00","Time","","Minute,Hour",NULL
+99,"21/08/2018 15:00","Time","Minute,Hour",NULL
 100,"21/08/2018 15:00","Booking","Modified",NULL
 101,"21/08/2018 15:00","Exception","Raised",NULL
 102,"21/08/2018 15:00","Invoice","Generated",NULL
