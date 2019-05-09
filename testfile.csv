@@ -1,0 +1,4 @@
+Id,UtcDate,Topic,Kind,UtcProcessedDate
+15,"21/08/2018 09:00","Time","Minute,Hour",NULL
+16,"21/08/2018 09:00","Booking","Modified",NULL
+17,"21/08/2018 09:00","Passenger","Modified",NULL

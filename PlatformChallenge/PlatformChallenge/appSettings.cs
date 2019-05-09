@@ -8,7 +8,7 @@ namespace PlatformChallenge
 {
     class appSettings
     {
-        public static string WebhookPath = "https://webhook.site/cdf70987-e367-4a00-9e3e-7c559cd3f5ca";
-        public static string File = @"C:\Users\jtaylor\source\repos\gt-platform-challenge\couplerowtest.csv";
+        public static string WebhookPath = "https://webhook.site/ec8d6542-74ff-4fce-a0ed-0e6a4aa1b464";
+        public static string File = @"C:\Users\jtaylor\source\repos\gt-challenge\testfile.csv";
     }
 }

@@ -8,6 +8,6 @@ namespace PlatformChallenge.Objects
 {
     public class RecordData
     {
-        public string id { get; set; }
+        public int id { get; set; }
     }
 }

@@ -25,20 +25,28 @@ namespace PlatformChallenge
                     // Skip header row
                     if (!firstLine)
                     {
-                        // Build the object which we will be posting
-                        ParsedRecord record = new ParsedRecord
+                        try
                         {
-                            date_utc = fields[1],
-                            resource = fields[2],
-                            event_type = fields[3],
-                            data = new RecordData
+                            // Build the object which we will be posting
+                            ParsedRecord record = new ParsedRecord
                             {
-                                id = fields[0]
-                            }
-                        };
+                                date_utc = Convert.ToDateTime(fields[1]),
+                                resource = fields[2],
+                                event_type = fields[3],
+                                data = new RecordData
+                                {
+                                    id = Convert.ToInt32(fields[0])
+                                }
+                            };
 
-                        recordsIn.Add(record);
-
+                            recordsIn.Add(record);
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine("Line: {0} - Is not formatted correctly", parser.LineNumber);
+                            throw;
+                        }
+                        
                     }
                     else
                     {

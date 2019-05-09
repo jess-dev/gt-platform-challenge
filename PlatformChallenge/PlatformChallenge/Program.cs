@@ -12,9 +12,16 @@ namespace PlatformChallenge
     {
         static void Main(string[] args)
         {
-
             var input = CSVInput.Parse(appSettings.File);
-            Console.ReadLine();
+            if (input != null)
+            {
+                foreach (ParsedRecord record in input)
+                {
+                    WebHookInterface.Post(record);
+                    System.Threading.Thread.Sleep(5000);
+                }
+            }
+
         }
     }
 }
