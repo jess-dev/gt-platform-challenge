@@ -1,3 +1,20 @@
+# My Thought Process
+When initially approaching the project I split it into 3 main areas:
+
+    - Parsing the CSV
+    - Converting the fields to JSON and posting the records 
+    - Handling errors
+
+For parsing the CSV I decided to reference Microsoft.VisualBasic and use the TextFieldParser, I chose this because it was something I have worked with in the past and because it was already in the .net framework, I could have brought in something like CSVHelper but I thought this was unnessecary for a small csv file. In the future if this project was to be used for something much larger another method should be used, but for the current spec TextFieldParser would do the job. Whilst parsing the CSV I create a ParsedRecord object which contains a property which is a RecordData object, all of the data from a row is put into a ParsedRecord object and then added to a list of objects to iterate over.
+
+**Note: My first approach to this was to do the post whilst parsing the csv, so after a record is parsed it is posted off, this is what the spec sounded like it wanted me to do. I didn't like doing it like this though because it meant that my CSVInput class was also doing the posting and wasn't a good seperation of concerns. After emailing Bartek to check it was ok I then changed this so that my CSVInput just parses the csv and outputs the list of objects**
+
+Similarly, for posting the web requests a library could also be used but the functionality for a simple post request is there in .net so I just used that. To convert the object into a JSON format I used NewtonSoft, a NuGet package which I have used before.
+
+To handle errors I thought about what could go wrong with this program, the csv could be formatted incorrectly and the posts might not be successfull. I put try/catch blocks around code that handles those parts and print to the screen any errors that have occured. To make sure that the input is in the correct format I also made the date and id propertys DateTime and Int values
+
+**The paths for the webhook URL and the csv files are stored in the appSettings.cs file and should be changed in there before running the program**
+
 # Platform Team Challenge
 
 Thank you for your interest in joining G Touring, and specifically being part
