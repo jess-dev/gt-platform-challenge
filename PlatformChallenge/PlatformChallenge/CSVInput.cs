@@ -39,10 +39,12 @@ namespace PlatformChallenge
                                 }
                             };
 
+                            // Build a collection of objects to post
                             recordsIn.Add(record);
                         }
                         catch (FormatException)
                         {
+                            // Could also log this somewhere, send an email etc
                             Console.WriteLine("Line: {0} - Is not formatted correctly", parser.LineNumber);
                             throw;
                         }

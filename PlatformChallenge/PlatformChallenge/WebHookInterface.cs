@@ -14,20 +14,28 @@ namespace PlatformChallenge
     {
         public static void Post(ParsedRecord record)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(appSettings.WebhookPath);
-            httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Method = "POST";
-
-            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            try
             {
-                string json = JsonConvert.SerializeObject(record);
-                streamWriter.Write(json);
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(appSettings.WebhookPath);
+                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.Method = "POST";
+
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    string json = JsonConvert.SerializeObject(record);
+                    streamWriter.Write(json);
+                }
+
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                }
             }
-
-            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            catch (WebException)
             {
-                var result = streamReader.ReadToEnd();
+                Console.WriteLine("There was an issue while posting ID: {0}", record.data.id);
+                throw;
             }
         }
     }
