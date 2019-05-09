@@ -17,12 +17,13 @@ namespace PlatformChallenge
             {
                 List<ParsedRecord> recordsIn = new List<ParsedRecord>();
                 bool firstLine = true;
+
                 parser.SetDelimiters(",");
                 while (!parser.EndOfData)
                 {
                     string[] fields = parser.ReadFields();
 
-                    // Skip header row
+                    // Checking for the header row to avoid processing it
                     if (!firstLine)
                     {
                         try

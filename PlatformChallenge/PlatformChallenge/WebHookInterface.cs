@@ -16,10 +16,12 @@ namespace PlatformChallenge
         {
             try
             {
+                // create web request
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(appSettings.WebhookPath);
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
 
+                // convert our object to a json string
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
                 {
                     string json = JsonConvert.SerializeObject(record);
