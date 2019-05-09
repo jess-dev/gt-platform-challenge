@@ -31,6 +31,8 @@ namespace PlatformChallenge
                 {
                     var result = streamReader.ReadToEnd();
                 }
+
+                Console.WriteLine("ID: {0} - Posted successfully - {1}", record.data.id, DateTime.Now);
             }
             catch (WebException)
             {
