@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.FileIO;
+using PlatformChallenge.Objects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,9 @@ namespace PlatformChallenge
     {
         static void Main(string[] args)
         {
+
+            var input = CSVInput.Parse(appSettings.File);
+            Console.ReadLine();
         }
     }
 }
